@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Night Vault — a top-down heist game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="data:,">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0a0c14; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #e8e8ff;
+  }
+  #wrap { width: min(1280px, 100vw); }
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #14161d;
+    cursor: crosshair;
+  }
+  #hint {
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #8a90a5;
+    text-align: center;
+  }
+  #hint b { color: #ffd34d; }
+</style>
+</head>
+<body>
+<main id="wrap">
+  <canvas width="1280" height="800" id="game"></canvas>
+  <div id="hint"><b>WASD / arrows</b> move &nbsp;·&nbsp; <b>Shift</b> sneak &nbsp;·&nbsp; <b>E</b> EMP &nbsp;·&nbsp; <b>Q</b> noisemaker &nbsp;·&nbsp; <b>R</b> restart &nbsp;·&nbsp; <b>M</b> mute &nbsp;·&nbsp; lift every prize, then reach the green EXIT</div>
+</main>
+<script src="src/main.js" type="module"></script>
+</body>
+</html>
